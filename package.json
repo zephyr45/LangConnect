@@ -1,0 +1,13 @@
+{
+  "name": "langconnect",
+  "version": "1.0.0",
+  "description": "MERN stack language exchange platform with real-time video calls and chat powered by Stream SDK",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm install --prefix backend && npm install --prefix frontend && npm run build --prefix frontend",
+    "start": "npm run start --prefix backend"
+  },
+  "keywords": ["language-exchange", "video-chat", "MERN", "stream-sdk", "real-time-chat"],
+  "author": "Full Stack Developer",
+  "license": "MIT"
+}
