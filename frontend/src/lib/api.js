@@ -39,6 +39,11 @@ export async function getRecommendedUsers() {
   return response.data;
 }
 
+export async function getSuggestedMatches() {
+  const response = await axiosInstance.get("/users/suggested-matches");
+  return response.data;
+}
+
 export async function getOutgoingFriendReqs() {
   const response = await axiosInstance.get("/users/outgoing-friend-requests");
   return response.data;

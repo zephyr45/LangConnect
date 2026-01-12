@@ -68,6 +68,11 @@ userSchema.methods.matchPassword = async function (enteredPassword) {
   return isPasswordCorrect;
 };
 
+// Compound index optimized for tier-based matching queries
+// Compound index optimized for tier-based matching queries
+// Order: nativeLanguage (T1+T2), learningLanguage (T1), isOnboarded (T1+T2)
+userSchema.index({ nativeLanguage: 1, learningLanguage: 1, isOnboarded: 1 });
+
 const User = mongoose.model("User", userSchema);
 
 export default User;
